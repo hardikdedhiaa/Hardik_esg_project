@@ -1,0 +1,2 @@
+2022-07-06 17:21:01,104 INFO first_app Thread-3 : you have selected filter sizeLarge
+2022-07-06 17:21:01,292 INFO werkzeug Thread-3 : 127.0.0.1 - - [06/Jul/2022 17:21:01] "POST /db HTTP/1.1" 200 -
