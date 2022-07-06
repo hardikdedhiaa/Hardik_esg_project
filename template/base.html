@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">ESG Application</a>
+        <form method="POST">
+        <div class="dropdo" margin-right="20px"></div>
+        <SELECT name="fsizedropdown" style="font-family:verdana" margin-right="55 px">
+            {% for j in data %}
+                <OPTION value={{j["size_type"]}}>{{j["size_type"]}}</OPTION>
+            {% endfor %}
+            </SELECT>
+            <input class="button1" type="submit" value="Filter By Size" name="click_but">    
+        </div>
+            <SELECT name="ffundallocation" style="font-family:verdana">
+                
+                    <OPTION value="fund_sector_basic_materials">Basic Material</OPTION>
+                    <OPTION value="fund_sector_communication_services">Communication Services</OPTION>
+                    <OPTION value="fund_sector_consumer_cyclical">Consumer Cyclical</OPTION>
+                    <OPTION value="fund_sector_consumer_defensive">Consumer Defensive</OPTION>
+                    <OPTION value="fund_sector_energy">Energy</OPTION>
+                    <OPTION value="fund_sector_financial_services">Finance</OPTION>
+                    <OPTION value="fund_sector_healthcare">Healthcare</OPTION>
+                    <OPTION value="fund_sector_industrials">Industries</OPTION>
+                    <OPTION value="fund_sector_real_estate">Real Estate</OPTION>
+                    <OPTION value="fund_sector_technology">Technology</OPTION>
+                    <OPTION value="fund_sector_utilities">Utilities</OPTION>
+                </SELECT>
+                <input class="button1" type="submit" value="Filter By Allocation" name="click_but">        
+        </form>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
